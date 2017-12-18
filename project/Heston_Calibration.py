@@ -71,6 +71,7 @@ def eur_call_heston_price_GL(theta, K, t, S_0, r, M, deg):
 
 # SECTION 2 - Functions, which are necessary to compute gradient of the characteristic function.
 # Equation (22) p. 11 shows the gradient of the characteristic function, which we are going to use in out project
+
 def h_1(theta, u, t):
     return -A(theta,u,t)
 def h_2(theta, u ,t):
@@ -176,3 +177,5 @@ def calibration_LM(theta, mkt_data, tau, eps1, eps2, eps3, S_0, r, M, deg):
             mu = mu*v
             v = 2*v
     return theta
+
+
