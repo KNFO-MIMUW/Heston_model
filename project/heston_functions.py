@@ -115,3 +115,6 @@ def r_function(theta):
                              mkt_data[i, 0])
     return r_vector
 
+
+
+
