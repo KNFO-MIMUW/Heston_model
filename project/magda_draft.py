@@ -1,7 +1,6 @@
 import numpy as np
 import math
 
-
 theta = np.array([0.08, 0.10, -0.8, 3, 0.25])
 
 def path(theta, N, S_0, T, er): #
