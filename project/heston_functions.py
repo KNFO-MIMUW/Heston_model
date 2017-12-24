@@ -1,6 +1,8 @@
 import numpy as np
 import math as math
 import cmath
+from uploading_data import mkt_data, S_0, r, M, deg
+from scipy import optimize
 
 # SECTION 1 - Functions, which are necessary to compute price of the european option for given parameters.
 def ksi(theta, u):
@@ -114,7 +116,8 @@ def r_function(theta):
         r_vector = np.append(r_vector, eur_call_heston_price(theta, mkt_data[i, 1], mkt_data[i, 2], S_0, r, M, deg) - \
                              mkt_data[i, 0])
     return r_vector
-
+def calibration_heston(theta):
+    return  optimize.least_squares(r_function, theta, method='lm').x
 
 
 
